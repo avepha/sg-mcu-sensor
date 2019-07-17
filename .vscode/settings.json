@@ -1,6 +1,0 @@
-{
-    "terminal.integrated.env.osx": {
-        "PATH": "/Users/alfarie/.platformio/penv/bin:/Users/alfarie/.platformio/penv:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/alfarie/Documents/Study/gcloud/google-cloud-sdk/bin",
-        "PLATFORMIO_CALLER": "vscode"
-    }
-}
