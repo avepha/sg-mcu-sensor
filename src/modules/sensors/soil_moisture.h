@@ -33,7 +33,8 @@ public:
   float GetSoilPotential()
   {
     float tempK = celsiusToKelvin(soilTemp);
-    return ((8.3143 * tempK)/ (1.8 * 10E-5)) * log(soil / 100);
+    float soilFraction = (soil > 0) ? log(soil / 100) : 0;
+    return ((8.3143 * tempK)/ (1.8 * 10E-5)) * soilFraction;
   }
 
   float celsiusToKelvin(int celsius) {
