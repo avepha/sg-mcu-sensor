@@ -1,3 +1,5 @@
+#define SENSOR_STA 1
+
 #include <Arduino.h>
 
 #include "Task.h"
@@ -7,6 +9,7 @@
 
 SoftwareSerial sensors(8,9);
 
+#include "helper.h"
 #include "./modules/sensors/soil_moisture.h"
 #include "./modules/sensors/par.h"
 #include "./modules/sensors/air.h"

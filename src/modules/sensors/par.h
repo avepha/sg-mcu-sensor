@@ -16,6 +16,10 @@ class Par : public Task
       return par;
     }
 
+    float GetParAcc() {
+      return 0;
+    }
+
   private:
     float par;
     virtual bool OnStart()
