@@ -70,7 +70,6 @@ void getSensors() {
 void publishSensors() {
 //  Serial.print(", start delayed by ");
 //  Serial.println(tPublish.getStartDelay());
-
   int bucketSize = 6;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
@@ -81,7 +80,7 @@ void publishSensors() {
   sensorBucket[5] = Float16Compressor::compress(parAccumulation / 1000);
 
   byte payload_sta_1[bucketSize * sizeof(uint16_t) + sizeof(byte) * 4];
-  craftBytesArrayOfSensorPayload(1, sensorBucket, bucketSize, payload_sta_1);
+  craftBytesArrayOfSensorPayload(SENSOR_STA, sensorBucket, bucketSize, payload_sta_1);
   outletPort.write(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
 
   printBytes(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
@@ -90,7 +89,7 @@ void publishSensors() {
   restoreBytesArrayToSensorPayload(payload_sta_1, bucketSize * sizeof(uint16_t) + sizeof(byte) * 4, dePayload);
 
   Serial.print("Decompress: ");
-  for(int i = 0; i < sizeof(dePayload) / sizeof(dePayload[0]); i++) {
+  for(unsigned int i = 0; i < sizeof(dePayload) / sizeof(dePayload[0]); i++) {
     Serial.print(String(dePayload[i]) + " ");
   }
   Serial.println();
@@ -103,6 +102,7 @@ void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucket
   payload[1] = sta;
   // payload[2-12] = sensor_payload
   int indexPayload = 2;
+
   for(int i = 0; i < bucketSize; i++) {
     byte value[2];
     Uint16ToBytes(sensorBucket[i], value);
@@ -110,5 +110,6 @@ void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucket
   }
 
   payload[payloadSize - 1] = 0xEF;
-  payload[payloadSize - 2] = modsum(payload, payloadSize);
+  // get only payload to calculate checksum
+  payload[payloadSize - 2] = modsum(payload + 1, payloadSize - 3);
 }
