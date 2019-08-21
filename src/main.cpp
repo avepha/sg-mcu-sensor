@@ -1,3 +1,4 @@
+#define SG_TEST
 #define SENSOR_STA 1
 #define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_TIMECRITICAL
@@ -54,6 +55,15 @@ void getSensors() {
   par = parSensor.getPar();
   parAccumulation = (parAccumulation < 10e6) ? parAccumulation + parSensor.getPar() : 0;
 
+#ifdef SG_TEST
+  temperature = (float)random(280, 288) / 10;
+  humidity = (float)random(500, 510) / 10;
+  soilTemperature = (float)random(290, 298) / 10;
+  soil = (float)random(510, 520) / 10;
+  par = (float)random(10, 15) / 10;
+  parAccumulation = (parAccumulation < 10e6) ? parAccumulation + par : 0;
+#endif
+
 
   Serial.print("Actual: ");
   Serial.print(String(temperature) + " ");
@@ -82,6 +92,11 @@ void publishSensors() {
   byte payload_sta_1[bucketSize * sizeof(uint16_t) + sizeof(byte) * 4];
   craftBytesArrayOfSensorPayload(SENSOR_STA, sensorBucket, bucketSize, payload_sta_1);
   outletPort.write(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
+
+#ifdef SG_TEST
+  craftBytesArrayOfSensorPayload(7, sensorBucket, bucketSize, payload_sta_1);
+  outletPort.write(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
+#endif
 
   printBytes(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
 
