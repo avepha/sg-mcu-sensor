@@ -23,6 +23,7 @@
 float temperature = 0;
 float humidity = 0;
 float soilTemperature = 0;
+float vpd = 0;
 float soil = 0;
 float par = 0;
 float parAccumulation = 0;
@@ -57,6 +58,7 @@ void loop() {
 void getSensors() {
   temperature = airSensor.readTemperatureC();
   humidity = airSensor.readHumidity();
+  vpd =
   soilTemperature = soilSensor.readTemperatureC();
   soil = soilSensor.readHumidity();
   par = parSensor.getPar();
