@@ -32,7 +32,7 @@ class SHT1x
     float readTemperatureRaw();
     int shiftIn(int _dataPin, int _clockPin, int _numBits);
     void sendCommandSHT(int _command, int _dataPin, int _clockPin);
-    void waitForResultSHT(int _dataPin);
+    bool waitForResultSHT(int _dataPin);
     int getData16SHT(int _dataPin, int _clockPin);
     void skipCrcSHT(int _dataPin, int _clockPin);
 };

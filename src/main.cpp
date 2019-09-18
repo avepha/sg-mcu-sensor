@@ -1,4 +1,4 @@
-#define SG_TEST
+//#define SG_TEST
 #define SENSOR_STA 1
 #define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_TIMECRITICAL

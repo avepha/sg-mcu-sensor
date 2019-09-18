@@ -41,6 +41,10 @@ float SHT1x::readTemperatureC()
   // Fetch raw value
   _val = readTemperatureRaw();
 
+  // sensor is inactive
+  if (_val == -1)
+    return 0;
+
   // Convert raw value to degrees Celsius
   _temperature = (_val * D2) + D1;
 
@@ -61,6 +65,10 @@ float SHT1x::readTemperatureF()
 
   // Fetch raw value
   _val = readTemperatureRaw();
+
+  // sensor is inactive
+  if (_val == -1)
+    return 0;
 
   // Convert raw value to degrees Fahrenheit
   _temperature = (_val * D2) + D1;
@@ -90,20 +98,25 @@ float SHT1x::readHumidity()
 
   // Fetch the value from the sensor
   sendCommandSHT(_gHumidCmd, _dataPin, _clockPin);
-  waitForResultSHT(_dataPin);
-  _val = getData16SHT(_dataPin, _clockPin);
-  skipCrcSHT(_dataPin, _clockPin);
+  bool isActive = waitForResultSHT(_dataPin);
 
-  // Apply linear conversion to raw value
-  _linearHumidity = C1 + C2 * _val + C3 * _val * _val;
+  if (isActive) {
+    _val = getData16SHT(_dataPin, _clockPin);
+    skipCrcSHT(_dataPin, _clockPin);
 
-  // Get current temperature for humidity correction
-  _temperature = readTemperatureC();
+    // Apply linear conversion to raw value
+    _linearHumidity = C1 + C2 * _val + C3 * _val * _val;
 
-  // Correct humidity value for current temperature
-  _correctedHumidity = (_temperature - 25.0 ) * (T1 + T2 * _val) + _linearHumidity;
+    // Get current temperature for humidity correction
+    _temperature = readTemperatureC();
 
-  return (_correctedHumidity);
+    // Correct humidity value for current temperature
+    _correctedHumidity = (_temperature - 25.0 ) * (T1 + T2 * _val) + _linearHumidity;
+
+    return (_correctedHumidity);
+  }
+
+  return 0;
 }
 
 
@@ -120,11 +133,16 @@ float SHT1x::readTemperatureRaw()
   int _gTempCmd  = 0b00000011;
 
   sendCommandSHT(_gTempCmd, _dataPin, _clockPin);
-  waitForResultSHT(_dataPin);
-  _val = getData16SHT(_dataPin, _clockPin);
-  skipCrcSHT(_dataPin, _clockPin);
+  bool isActive = waitForResultSHT(_dataPin);
 
-  return (_val);
+  if (isActive) {
+    _val = getData16SHT(_dataPin, _clockPin);
+    skipCrcSHT(_dataPin, _clockPin);
+
+    return _val;
+  }
+
+  return -1;
 }
 
 /**
@@ -137,7 +155,7 @@ int SHT1x::shiftIn(int _dataPin, int _clockPin, int _numBits)
   for (i=0; i<_numBits; ++i)
   {
      digitalWrite(_clockPin, HIGH);
-     delay(10);  // I don't know why I need this, but without it I don't get my 8 lsb of temp
+//     delay(1);  // I don't know why I need this, but without it I don't get my 8 lsb of temp
      ret = ret*2 + digitalRead(_dataPin);
      digitalWrite(_clockPin, LOW);
   }
@@ -181,26 +199,25 @@ void SHT1x::sendCommandSHT(int _command, int _dataPin, int _clockPin)
 
 /**
  */
-void SHT1x::waitForResultSHT(int _dataPin)
+bool SHT1x::waitForResultSHT(int _dataPin)
 {
   int i;
   int ack;
 
   pinMode(_dataPin, INPUT);
 
-  for(i= 0; i < 100; ++i)
+  for(i= 0; i < 25; ++i)
   {
     delay(10);
     ack = digitalRead(_dataPin);
 
     if (ack == LOW) {
-      break;
+      return true;
     }
   }
 
-  if (ack == HIGH) {
-    //Serial.println("Ack Error 2"); // Can't do serial stuff here, need another way of reporting errors
-  }
+
+  return false;
 }
 
 /**
