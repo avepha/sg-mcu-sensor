@@ -10,7 +10,7 @@
 #include "util/haftFloat.h"
 #include "util/converter.h"
 
-#include <SHT1x.h>
+#include "./external_lib/sht1x/SHT1x.h"
 #include "par.h"
 
 float temperature = 0;
