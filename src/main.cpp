@@ -2,6 +2,7 @@
  *  - when checksum = stop or start byte, system will be crashed.
  *  - we still can not identify whenever sensor is inactive (currently 0 is identify as inactive sensor -> not good solution)
  *  TODO: revise all logic again!!!
+ *  TODO: set sensor station in build flag
  */
 
 //#define SG_TEST
