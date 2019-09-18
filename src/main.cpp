@@ -36,6 +36,7 @@ void restoreBytesArrayToSensorPayload(byte *payload, int size, float *dePayload)
 void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucketSize, byte* payload);
 
 Scheduler scheduler;
+float getVpd(float, float);
 void getSensors();
 void publishSensors();
 Task tSensors(2000L, TASK_FOREVER, &getSensors, &scheduler, true);
@@ -58,7 +59,7 @@ void loop() {
 void getSensors() {
   temperature = airSensor.readTemperatureC();
   humidity = airSensor.readHumidity();
-  vpd =
+  vpd = getVpd(temperature, humidity);
   soilTemperature = soilSensor.readTemperatureC();
   soil = soilSensor.readHumidity();
   par = parSensor.getPar();
@@ -77,6 +78,7 @@ void getSensors() {
   Serial.print("Actual: ");
   Serial.print(String(temperature) + " ");
   Serial.print(String(humidity) + " ");
+  Serial.print(String(vpd) + " ");
   Serial.print(String(soilTemperature) + " ");
   Serial.print(String(soil) + " ");
   Serial.print(String(par) + " ");
@@ -89,14 +91,15 @@ void getSensors() {
 void publishSensors() {
 //  Serial.print(", start delayed by ");
 //  Serial.println(tPublish.getStartDelay());
-  int bucketSize = 6;
+  int bucketSize = 7;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
   sensorBucket[1] = Float16Compressor::compress(humidity);
-  sensorBucket[2] = Float16Compressor::compress(soilTemperature);
-  sensorBucket[3] = Float16Compressor::compress(soil);
-  sensorBucket[4] = Float16Compressor::compress(par);
-  sensorBucket[5] = Float16Compressor::compress(parAccumulation / 1000);
+  sensorBucket[2] = Float16Compressor::compress(vpd);
+  sensorBucket[3] = Float16Compressor::compress(soilTemperature);
+  sensorBucket[4] = Float16Compressor::compress(soil);
+  sensorBucket[5] = Float16Compressor::compress(par);
+  sensorBucket[6] = Float16Compressor::compress(parAccumulation / 1000);
 
   byte payload_sta_1[bucketSize * sizeof(uint16_t) + sizeof(byte) * 4];
   craftBytesArrayOfSensorPayload(SENSOR_STA, sensorBucket, bucketSize, payload_sta_1);
@@ -109,7 +112,7 @@ void publishSensors() {
 
   printBytes(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
 
-  float dePayload[6];
+  float dePayload[7];
   restoreBytesArrayToSensorPayload(payload_sta_1, bucketSize * sizeof(uint16_t) + sizeof(byte) * 4, dePayload);
 
   Serial.print("Decompress: ");
@@ -136,4 +139,9 @@ void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucket
   payload[payloadSize - 1] = 0xEF;
   // get only payload to calculate checksum
   payload[payloadSize - 2] = modsum(payload + 1, payloadSize - 3);
+}
+
+float getVpd(float _temperature , float _humidity) {
+  float spv = 610.7 * pow(10, ((7.5 * _temperature) / (237.3 + _temperature)));
+  return (1 - (_humidity / 100)) * spv;
 }
