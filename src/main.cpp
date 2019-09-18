@@ -59,7 +59,7 @@ void loop() {
 void getSensors() {
   temperature = airSensor.readTemperatureC();
   humidity = airSensor.readHumidity();
-  vpd = getVpd(temperature, humidity);
+  vpd = getVpd(temperature, humidity) / 1000;
   soilTemperature = soilSensor.readTemperatureC();
   soil = soilSensor.readHumidity();
   par = parSensor.getPar();
