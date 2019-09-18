@@ -1,3 +1,9 @@
+/* There are still bugs in the system
+ *  - when checksum = stop or start byte, system will be crashed.
+ *  - we still can not identify whenever sensor is inactive (currently 0 is identify as inactive sensor -> not good solution)
+ *  TODO: revise all logic again!!!
+ */
+
 //#define SG_TEST
 #define SENSOR_STA 1
 #define _TASK_SLEEP_ON_IDLE_RUN
