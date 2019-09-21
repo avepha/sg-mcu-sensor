@@ -7,3 +7,6 @@
 .vscode
 .idea
 cmake-build-debug
+CMakeLists.txt
+CMakeListsPrivate.txt
+cmake-build-debug

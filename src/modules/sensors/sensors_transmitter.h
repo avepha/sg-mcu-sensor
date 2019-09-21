@@ -1,7 +1,6 @@
 #include <Task.h>
 extern TaskManager taskManager;
 
-
 class Sensors : public Task
 {
   public:
