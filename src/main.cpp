@@ -89,8 +89,6 @@ void getSensors() {
 }
 
 void publishSensors() {
-//  Serial.print(", start delayed by ");
-//  Serial.println(tPublish.getStartDelay());
   int bucketSize = 7;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
