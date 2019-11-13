@@ -1,7 +1,3 @@
-//
-// Created by Alfarie-MBP on 2019-08-15.
-//
-
 #include "par.h"
 
 Par::Par(int pin) : pin(pin) {

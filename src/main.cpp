@@ -27,11 +27,12 @@ float vpd = 0;
 float soil = 0;
 float par = 0;
 float parAccumulation = 0;
+float co2 = 0;
 
 SoftwareSerial outletPort(8, 9);
 
 SHT1x airSensor(2, 3); // air
-SHT1x soilSensor(6, 7); // soil
+SHT1x soilSensor(5, 6); // soil
 void restoreBytesArrayToSensorPayload(byte *payload, int size, float *dePayload);
 void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucketSize, byte* payload);
 
@@ -42,7 +43,7 @@ void publishSensors();
 Task tSensors(2000L, TASK_FOREVER, &getSensors, &scheduler, true);
 Task tPublish(0, TASK_ONCE, &publishSensors, &scheduler, false);
 
-Par parSensor(A0);
+Par parSensor(A3);
 
 void setup() {
   Wire.begin();
@@ -64,6 +65,7 @@ void getSensors() {
   soil = soilSensor.readHumidity();
   par = parSensor.getPar();
   parAccumulation = (parAccumulation < 10e6) ? parAccumulation + parSensor.getPar() : 0;
+  co2 = 0;
 
 #ifdef SG_TEST
   temperature = (float)random(280, 288) / 10;
@@ -72,6 +74,7 @@ void getSensors() {
   soil = (float)random(510, 520) / 10;
   par = (float)random(10, 15) / 10;
   parAccumulation = (parAccumulation < 10e6) ? parAccumulation + par : 0;
+  co2 = random(1000, 1200);
 #endif
 
 
@@ -83,13 +86,14 @@ void getSensors() {
   Serial.print(String(soil) + " ");
   Serial.print(String(par) + " ");
   Serial.print(String(parAccumulation) + " ");
+  Serial.print(String(co2) + " ");
   Serial.println();
 
   tPublish.restart();
 }
 
 void publishSensors() {
-  int bucketSize = 7;
+  int bucketSize = 8;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
   sensorBucket[1] = Float16Compressor::compress(humidity);
@@ -98,6 +102,7 @@ void publishSensors() {
   sensorBucket[4] = Float16Compressor::compress(soil);
   sensorBucket[5] = Float16Compressor::compress(par);
   sensorBucket[6] = Float16Compressor::compress(parAccumulation / 1000);
+  sensorBucket[7] = Float16Compressor::compress(co2);
 
   byte payload_sta_1[bucketSize * sizeof(uint16_t) + sizeof(byte) * 4];
   craftBytesArrayOfSensorPayload(SENSOR_STA, sensorBucket, bucketSize, payload_sta_1);
@@ -110,7 +115,7 @@ void publishSensors() {
 
   printBytes(payload_sta_1, sizeof(payload_sta_1) / sizeof(payload_sta_1[0]));
 
-  float dePayload[7];
+  float dePayload[bucketSize];
   restoreBytesArrayToSensorPayload(payload_sta_1, bucketSize * sizeof(uint16_t) + sizeof(byte) * 4, dePayload);
 
   Serial.print("Decompress: ");
