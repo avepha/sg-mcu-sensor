@@ -16,6 +16,7 @@
 #include <TaskScheduler.h>
 #include "util/haftFloat.h"
 #include "util/converter.h"
+#include "./config/config.h"
 
 #include "./external_lib/sht1x/SHT1x.h"
 #include "par.h"
@@ -29,10 +30,11 @@ float par = 0;
 float parAccumulation = 0;
 float co2 = 0;
 
-SoftwareSerial outletPort(8, 9);
+#define DIR_485_PIN 8
+SoftwareSerial outletPort(SG_SENSOR_RX, SG_SENSOR_TX);
 
-SHT1x airSensor(2, 3); // air
-SHT1x soilSensor(5, 6); // soil
+SHT1x airSensor(AIR_SENSOR_DATA_PIN, AIR_SENSOR_CLK_PIN); // air
+SHT1x soilSensor(SOIL_SENSOR_DATA_PIN, SOIL_SENSOR_CLK_PIN); // soil
 void restoreBytesArrayToSensorPayload(byte *payload, int size, float *dePayload);
 void craftBytesArrayOfSensorPayload(byte sta, uint16_t *sensorBucket, int bucketSize, byte* payload);
 
@@ -43,9 +45,12 @@ void publishSensors();
 Task tSensors(2000L, TASK_FOREVER, &getSensors, &scheduler, true);
 Task tPublish(0, TASK_ONCE, &publishSensors, &scheduler, false);
 
-Par parSensor(A3);
+Par parSensor(PAR_PIN);
 
 void setup() {
+  analogReference(EXTERNAL);
+  pinMode(DIR_485_PIN, OUTPUT);
+  digitalWrite(DIR_485_PIN, HIGH);
   Wire.begin();
   Serial.begin(9600);
   outletPort.begin(9600);
@@ -93,7 +98,7 @@ void getSensors() {
 }
 
 void publishSensors() {
-  int bucketSize = 8;
+  int bucketSize = 7;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
   sensorBucket[1] = Float16Compressor::compress(humidity);
