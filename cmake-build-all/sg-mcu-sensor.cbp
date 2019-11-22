@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sg-mcu-sensor"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_DEBUG">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_DEBUG"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_DEVICE_LIST">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_DEVICE_LIST"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD_VERBOSE">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD_VERBOSE"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_MONITOR">
+				<Option working_dir="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 PLATFORMIO_MONITOR"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/cmake-build-all/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/.library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/LICENSE.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/README.md">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example01/Scheduler_example01.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example02/Scheduler_example02.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example03/Scheduler_example03.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example04_StatusRequest/Scheduler_example04_StatusRequest.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example05_StatusRequest/Scheduler_example05_StatusRequest.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example06_IDLE/Scheduler_example06_IDLE.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example07_WDT/Scheduler_example07_WDT.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example08_LTS/Scheduler_example08_LTS.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example09_TimeCritical/Scheduler_example09_TimeCritical.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example10_Benchmark/Scheduler_example10_Benchmark.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example11_Priority/Scheduler_example11_Priority.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example12_Priority/Scheduler_example12_Priority.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example13_Micros/Scheduler_example13_Micros.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example14_Yield/Scheduler_example14_Yield.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example15_STDFunction/Scheduler_example15_STDFunction.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example16_Multitab/Scheduler_example16_Multitab.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example16_Multitab/file1.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example16_Multitab/file2.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example16_Multitab/header.hpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example16_Multitab/ts.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example17_Timeout/Scheduler_example17_Timeout.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example18_StatusRequest_LTS_WDT_Timeout/Scheduler_example18_StatusRequest_LTS_WDT_Timeout.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example19_Dynamic_Tasks/Scheduler_example19_Dynamic_Tasks.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example20_StatusRequest_LTS_WDT_Timeout_Object/Scheduler_example20_StatusRequest_LTS_WDT_Timeout_Object.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example20_StatusRequest_LTS_WDT_Timeout_Object/SuperSensor.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example20_StatusRequest_LTS_WDT_Timeout_Object/SuperSensor.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/Calculator.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/Calculator.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/Scheduler_example21_OO_Callbacks.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/SuperSensor.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/SuperSensor.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/Ticker.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_example21_OO_Callbacks/Ticker.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/examples/Scheduler_template/Scheduler_template.ino">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/extras/TaskScheduler.doc">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/extras/TaskScheduler.pdf">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/extras/TaskScheduler_html.png">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/keywords.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/library.json">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/library.properties">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/src/TaskScheduler.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/.pio/libdeps/v1/TaskScheduler_ID721/src/TaskSchedulerDeclarations.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/config/config.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/config/v1_conf.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/config/v2_conf.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/external_lib/k30/K30_I2C.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/external_lib/k30/K30_I2C.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/external_lib/sht1x/SHT1x.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/external_lib/sht1x/SHT1x.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/main.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/par.cpp">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/par.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/util/converter.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/src/util/haftFloat.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/alfarie/Documents/Grobot-Project/@Project/sg-lts/mcu/sg-mcu-sensor/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
