@@ -18,6 +18,7 @@
 #include "util/converter.h"
 #include "./config/config.h"
 
+#include "./external_lib/k30/K30_I2C.h"
 #include "./external_lib/sht1x/SHT1x.h"
 #include "par.h"
 
@@ -46,6 +47,7 @@ Task tSensors(2000L, TASK_FOREVER, &getSensors, &scheduler, true);
 Task tPublish(0, TASK_ONCE, &publishSensors, &scheduler, false);
 
 Par parSensor(PAR_PIN);
+K30 k30(0x34);
 
 void setup() {
   analogReference(EXTERNAL);
@@ -70,7 +72,12 @@ void getSensors() {
   soil = soilSensor.readHumidity();
   par = parSensor.getPar();
   parAccumulation = (parAccumulation < 10e6) ? parAccumulation + parSensor.getPar() : 0;
-  co2 = 0;
+
+  int _co2;
+  int rc = k30.readCO2(_co2);
+  if (rc == 0) {
+    co2 = _co2;
+  }
 
 #ifdef SG_TEST
   temperature = (float)random(280, 288) / 10;

@@ -1,18 +1,25 @@
-#define AIR_SENSOR_DATA_PIN 2
-#define AIR_SENSOR_CLK_PIN 3
+#ifdef SG_SENSOR_V2
+const int AIR_SENSOR_DATA_PIN = 2;
+const int AIR_SENSOR_CLK_PIN = 3;
 
-#define SOIL_SENSOR_DATA_PIN 5
-#define SOIL_SENSOR_CLK_PIN 6
+const int SOIL_SENSOR_DATA_PIN = 6;
+const int SOIL_SENSOR_CLK_PIN = 7;
 
-#define PAR_PIN A3
+const int PAR_PIN = A0;
 
-#define SG_SENSOR_RX 9
-#define SG_SENSOR_TX 7
-
-#ifdef SG_SENSOR_V1
-#include "./v1_conf.h"
+const int SG_SENSOR_RX = 8;
+const int SG_SENSOR_TX = 9;
 #endif
 
-#ifdef SG_SENSOR_V2
-#include "./v2_conf.h"
+#ifdef SG_SENSOR_V1
+const int AIR_SENSOR_DATA_PIN = 2;
+const int AIR_SENSOR_CLK_PIN = 3;
+
+const int SOIL_SENSOR_DATA_PIN = 5;
+const int SOIL_SENSOR_CLK_PIN = 6;
+
+const int PAR_PIN = A3;
+
+const int SG_SENSOR_RX = 9;
+const int SG_SENSOR_TX = 7;
 #endif

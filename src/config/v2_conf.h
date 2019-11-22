@@ -3,6 +3,7 @@
 
 #define SOIL_SENSOR_DATA_PIN 5
 #define SOIL_SENSOR_CLK_PIN 6
+
 #define PAR_PIN A3
 
 #define SG_SENSOR_RX 9
