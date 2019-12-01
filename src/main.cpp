@@ -56,6 +56,9 @@ void setup() {
   Wire.begin();
   Serial.begin(9600);
   outletPort.begin(9600);
+  
+  Serial.println("initializing...");
+  Serial.println("SG Version: " + SG_VERSION);
 
   tSensors.enableDelayed();
 }
