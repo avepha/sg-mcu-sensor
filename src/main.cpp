@@ -105,7 +105,7 @@ void getSensors() {
 }
 
 void publishSensors() {
-  int bucketSize = 7;
+  int bucketSize = 8;
   uint16_t sensorBucket[bucketSize];
   sensorBucket[0] = Float16Compressor::compress(temperature);
   sensorBucket[1] = Float16Compressor::compress(humidity);
