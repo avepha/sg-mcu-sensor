@@ -205,7 +205,7 @@ void fPrintSensor() {
   Serial.print("read sensor:");
   for (int i = 0 ; i < sizeof(sensors) / sizeof(sensors[0]); i++) {
     Serial.print(" ");
-    Serial.print(String(sensors[i]));
+    Serial.print(String((float)sensors[i]));
   }
   Serial.println();
 }
