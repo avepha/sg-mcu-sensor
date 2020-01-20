@@ -16,7 +16,6 @@
 #include <SoftwareSerial.h>
 #include <TaskScheduler.h>
 #include <FastCRC.h>
-#include "util/haftFloat.h"
 #include "util/converter.h"
 #include "./config/config.h"
 #include "./util/packetUtil.h"
