@@ -167,7 +167,10 @@ void fCheckRequestAndResponse() {
             }
 
             uint16_t packetSize = generatePacket(packets, SLAVE_ID, 0x04, data, sizeof(sensors));
+            digitalWrite(SG_SENSOR_DIR, SG_SENSOR_SEND_MODE);
             outletPort.write(packets, packetSize);
+            digitalWrite(SG_SENSOR_DIR, SG_SENSOR_RECV_MODE);
+
             Serial.print("[Info] write data: ");
             printBytes(packets, packetSize);
 
