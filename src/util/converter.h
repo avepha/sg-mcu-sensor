@@ -1,13 +1,11 @@
 #include <Arduino.h>
 
-void printBytes(byte *values, byte size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        Serial.print(values[i], HEX);
-        Serial.print(' ');
-    }
-    Serial.println();
+void printBytes(byte* values, uint16_t size) {
+  for (int i = 0 ; i < size; i++) {
+    Serial.print(values[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
 }
 
 void floatToBytes(float val, byte *bytes_array)
