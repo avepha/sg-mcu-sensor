@@ -222,8 +222,8 @@ Task tCheckRequestAndResponse(50, TASK_FOREVER, &fCheckRequestAndResponse, &schC
 
 void setup() {
   analogReference(EXTERNAL);
-  pinMode(DIR_485_PIN, OUTPUT);
-  digitalWrite(DIR_485_PIN, HIGH);
+  pinMode(SG_SENSOR_DIR, OUTPUT);
+  digitalWrite(SG_SENSOR_DIR, SG_SENSOR_RECV_MODE);
   Wire.begin();
   Serial.begin(9600);
   outletPort.begin(9600);
