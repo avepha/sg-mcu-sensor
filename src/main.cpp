@@ -9,6 +9,7 @@
 #define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_TIMECRITICAL
 #define _TASK_PRIORITY
+#define VERSION "1.0.1"
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -208,6 +209,7 @@ void setup() {
 
   Serial.println("initializing...");
   Serial.println("SG Version: " + SG_VERSION);
+  Serial.println("BUILD VERSION: " + String(VERSION));
 }
 
 void loop() {
