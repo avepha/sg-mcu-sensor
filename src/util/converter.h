@@ -44,15 +44,3 @@ byte modsum(byte *payload, byte payloadSize) {
 
   return sum % 255;
 }
-
-void restoreBytesArrayToSensorPayload(byte *bytesPayload, int size, float *dePayload) {
-  int bucketSize = (size - 3) / 2;
-
-
-  int indexPayload = 2;
-  for(int i = 0 ; i < bucketSize; i++) {
-    byte bytes[2];
-    memcpy(bytes, bytesPayload + indexPayload + sizeof(uint16_t) * i, 2);
-    dePayload[i] = Float16Compressor::decompress(BytesToUint16(bytes));
-  }
-}
