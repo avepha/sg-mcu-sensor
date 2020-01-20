@@ -9,7 +9,7 @@
 #define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_TIMECRITICAL
 #define _TASK_PRIORITY
-#define VERSION "1.0.6"
+#define VERSION "1.0.7"
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -224,6 +224,7 @@ void setup() {
   analogReference(EXTERNAL);
   pinMode(SG_SENSOR_DIR, OUTPUT);
   digitalWrite(SG_SENSOR_DIR, SG_SENSOR_RECV_MODE);
+
   Wire.begin();
   Serial.begin(9600);
   outletPort.begin(9600);
