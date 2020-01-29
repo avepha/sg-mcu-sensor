@@ -17,11 +17,11 @@ const String SG_VERSION = "v1";
 #endif
 
 #ifdef SG_SENSOR_V2
-const int AIR_SENSOR_DATA_PIN = 2;
-const int AIR_SENSOR_CLK_PIN = 3;
+const int AIR_SENSOR_DATA_PIN = 5;
+const int AIR_SENSOR_CLK_PIN = 6;
 
-const int SOIL_SENSOR_DATA_PIN = 5;
-const int SOIL_SENSOR_CLK_PIN = 6;
+const int SOIL_SENSOR_DATA_PIN = 2;
+const int SOIL_SENSOR_CLK_PIN = 3;
 
 const int PAR_PIN = A3;
 
