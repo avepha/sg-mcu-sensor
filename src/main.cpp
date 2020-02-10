@@ -135,30 +135,39 @@ void fCheckRequestAndResponse() {
           byte funcCode = packet[1];
           switch (funcCode) {
             case 0x04: {
-              uint32_t sensors[8];
+              float sensors[8];
               sensors[0] = temperature;
               sensors[1] = humidity;
               sensors[2] = vpd;
               sensors[3] = soilTemperature;
               sensors[4] = soil;
-              sensors[5] = par;
-              sensors[6] = parAccumulation;
-              sensors[7] = co2;
+              sensors[5] = co2;
+              sensors[6] = par;
+              sensors[7] = parAccumulation;
 #ifdef SG_TEST
-              sensors[0] = 25;
-            sensors[1] = 50;
-            sensors[2] = getVpd(25, 50);
-            sensors[3] = 25.5;
-            sensors[4] = 60.5;
-            sensors[5] = 105;
-            sensors[6] =+ sensors[5];
-            sensors[7] = 1500;
+              temperature = 25;
+              humidity = 50;
+              vpd = getVpd(25, 50);
+              soilTemperature = 25.5;
+              soil = 60.5;
+              co2 = 1500;
+              par = 105;
+              parAccumulation = 100;
+
+              sensors[0] = temperature;
+              sensors[1] = humidity;
+              sensors[2] = vpd;
+              sensors[3] = soilTemperature;
+              sensors[4] = soil;
+              sensors[5] = co2;
+              sensors[6] = par;
+              sensors[7] = parAccumulation;
+
 #endif
               // response sensors
               byte packets[100];
               byte data[100];
-              data[0] = 0x01; // 0x01 = type gsensor
-              uint16_t dataIndex = 1;
+              uint16_t dataIndex = 0;
               for (uint16_t i = 0; i < sizeof(sensors) / sizeof(sensors[0]); i++) {
                 memcpy(&data[dataIndex], &sensors[i], sizeof(sensors[i]));
                 dataIndex += 4;
