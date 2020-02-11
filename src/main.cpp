@@ -1,10 +1,3 @@
-/* There are still bugs in the system
- *  - when checksum = stop or start byte, system will be crashed.
- *  - we still can not identify whenever sensor is inactive (currently 0 is identify as inactive sensor -> not good solution)
- *  TODO: revise all logic again!!!
- *  TODO: set sensor station in build flag
- */
-
 #define SLAVE_ID 1
 #define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_TIMECRITICAL
@@ -162,7 +155,6 @@ void fCheckRequestAndResponse() {
               sensors[5] = co2;
               sensors[6] = par;
               sensors[7] = parAccumulation;
-
 #endif
               // response sensors
               byte packets[100];
@@ -248,6 +240,9 @@ void setup() {
   Serial.println("initializing...");
   Serial.println("SG Version: " + SG_VERSION);
   Serial.println("BUILD VERSION: " + String(VERSION));
+#ifdef SG_TEST
+  Serial.println("OP MODE: TEST");
+#endif
 }
 
 void loop() {
