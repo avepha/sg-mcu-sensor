@@ -44,12 +44,12 @@ float getVpd(float _temperature, float _humidity) {
 
 void fGetTemperature() {
   temperature = airSensor.readTemperatureC();
-  vpd = getVpd(temperature, humidity) / 1000;
+  vpd = getVpd(temperature, humidity);
 }
 
 void fGetHumidity() {
   humidity = airSensor.readHumidity();
-  vpd = getVpd(temperature, humidity) / 1000;
+  vpd = getVpd(temperature, humidity);
 }
 
 void fGetSoilTemperature() {
