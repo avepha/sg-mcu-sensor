@@ -43,21 +43,38 @@ float getVpd(float _temperature, float _humidity) {
 }
 
 void fGetTemperature() {
+#ifdef SG_TEST
+  temperature = (float)random(2500, 2600) / 100;
+#else
   temperature = airSensor.readTemperatureC();
+#endif
+
   vpd = getVpd(temperature, humidity);
 }
 
 void fGetHumidity() {
+#ifdef SG_TEST
+  humidity = (float)random(5100, 5300) / 100;
+#else
   humidity = airSensor.readHumidity();
+#endif
   vpd = getVpd(temperature, humidity);
 }
 
 void fGetSoilTemperature() {
+#ifdef SG_TEST
+  soilTemperature = (float)random(2500, 2600) / 100;
+#else
   soilTemperature = soilSensor.readTemperatureC();
+#endif
 }
 
 void fGetSoil() {
+#ifdef SG_TEST
+  soil = (float)random(5100, 5300) / 100;
+#else
   soil = soilSensor.readHumidity();
+#endif
 }
 
 void fGetPar() {
@@ -66,11 +83,15 @@ void fGetPar() {
 }
 
 void fGetCO2() {
+#ifdef SG_TEST
+  co2 = (float)random(1500, 1600);
+#else
   int _co2;
   int rc = k30.readCO2(_co2);
   if (rc == 0) {
     co2 = _co2;
   }
+#endif
 }
 
 void fCheckRequestAndResponse() {
@@ -137,25 +158,7 @@ void fCheckRequestAndResponse() {
               sensors[5] = co2;
               sensors[6] = par;
               sensors[7] = parAccumulation;
-#ifdef SG_TEST
-              temperature = 25;
-              humidity = 50;
-              vpd = getVpd(25, 50);
-              soilTemperature = 25.5;
-              soil = 60.5;
-              co2 = 1500;
-              par = 105;
-              parAccumulation = 100;
 
-              sensors[0] = temperature;
-              sensors[1] = humidity;
-              sensors[2] = vpd;
-              sensors[3] = soilTemperature;
-              sensors[4] = soil;
-              sensors[5] = co2;
-              sensors[6] = par;
-              sensors[7] = parAccumulation;
-#endif
               // response sensors
               byte packets[100];
               byte data[100];
@@ -193,7 +196,7 @@ void fCheckRequestAndResponse() {
 }
 
 void fPrintSensor() {
-  uint32_t sensors[8];
+  float sensors[8];
   sensors[0] = temperature;
   sensors[1] = humidity;
   sensors[2] = vpd;
