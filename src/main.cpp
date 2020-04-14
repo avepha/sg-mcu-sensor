@@ -134,7 +134,7 @@ void fCheckRequestAndResponse() {
           byte data[sizeof(packet) - 4];
           memcpy(data, &packet[2], sizeof(data));
 
-          uint16_t recalCrc = crc16.ccitt(data, sizeof(data));
+          uint16_t recalCrc = crc16.ccitt(packet, sizeof(packet) - 2);
 
           if (recalCrc != packetCrc) {
             // crc is not match
