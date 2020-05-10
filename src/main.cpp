@@ -12,6 +12,7 @@
 #include "util/converter.h"
 #include "./config/config.h"
 #include "./util/packetUtil.h"
+#include "./util/arr_print.h"
 
 #include "./external_lib/k30/K30_I2C.h"
 #include "./external_lib/sht1x/SHT1x.h"
@@ -105,8 +106,8 @@ void fCheckRequestAndResponse() {
   while (true) {
     if (outletPort.available()) {
       requestPacket[size] = outletPort.read();
-      size++;
 
+      size++;
       uint32_t timeDiff = micros() - timestamp;
       if (timeDiff > 3000 && timeDiff < 4000) {
         Serial.println("[Error] invalid packet, 1.5ms > timediff < 4ms");
@@ -120,23 +121,26 @@ void fCheckRequestAndResponse() {
       }
       uint32_t timeDiff = micros() - timestamp;
       if (timeDiff >= 4000) {
-        if (size > 7) {
-          byte packet[8];
-          memcpy(packet, requestPacket, 8);
+        if (size >= 9) {
+          size = 9;
+          byte packet[size];
+          memcpy(packet, requestPacket, size);
           if (packet[0] != SLAVE_ID) {
             break;
           }
 
-          byte crcByte[2] = {packet[sizeof(packet) - 2], packet[sizeof(packet) - 1]};
+          byte crcByte[2] = {packet[size - 2], packet[size - 1]};
           uint16_t packetCrc;
           memcpy(&packetCrc, crcByte, sizeof(packetCrc));
 
-          uint16_t recalCrc = crc16.modbus(packet, sizeof(packet) - 2);
+          uint16_t recalCrc = crc16.modbus(packet, size - 2);
+
+          arr_print("packet", packet, sizeof(packet));
 
           if (recalCrc != packetCrc) {
             // crc is not match
             // response error
-            Serial.println("[Error] Crc is not match");
+            Serial.println("[Error] Crc is not match " + String(recalCrc, HEX) + "--" + String(packetCrc, HEX));
             break;
           }
           else {
