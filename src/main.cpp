@@ -80,7 +80,7 @@ void fGetSoil() {
 
 void fGetPar() {
   par = parSensor.getPar();
-  parAccumulation = (parAccumulation < 10e6) ? parAccumulation + parSensor.getPar() : 0;
+  parAccumulation = (parAccumulation < 1e6) ? parAccumulation + parSensor.getPar() : 0;
 }
 
 void fGetCO2() {
