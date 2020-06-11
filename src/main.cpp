@@ -66,7 +66,7 @@ void fGetSoilTemperature() {
 #ifdef SG_TEST
   soilTemperature = (float)random(2500, 2600) / 100;
 #else
-  soilTemperature = soilSensor.readTemperatureC();
+  soilTemperature = soilSensor.readTemperatureC() - 3;
 #endif
 }
 
