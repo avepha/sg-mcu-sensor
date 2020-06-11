@@ -47,7 +47,7 @@ void fGetTemperature() {
 #ifdef SG_TEST
   temperature = (float)random(2500, 2600) / 100;
 #else
-  temperature = airSensor.readTemperatureC();
+  temperature = airSensor.readTemperatureC() - 3;
 #endif
 
   vpd = getVpd(temperature, humidity);
